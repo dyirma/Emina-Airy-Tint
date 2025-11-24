@@ -1,0 +1,22 @@
+{
+  "name": "Emina Airy Surprise Tint",
+  "short_name": "Emina Tint",
+  "description": "Landing page resmi Emina Airy Surprise Tint x Muzik Tiger.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FDF0F3",
+  "theme_color": "#FFB3C6",
+  "icons": [
+    { 
+      "src": "assets/icon-192.png", 
+      "sizes": "192x192", 
+      "type": "image/png" 
+    },
+    { 
+      "src": "assets/icon-512.png", 
+      "sizes": "512x512", 
+      "type": "image/png" 
+    }
+  ],
+  "orientation": "portrait"
+}
