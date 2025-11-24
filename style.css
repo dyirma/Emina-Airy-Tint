@@ -1,0 +1,253 @@
+/* Palet Warna Emina (Light Mode Default) */
+:root {
+    --emina-pink-primary: #86043c; /* Pink Utama (Dark Maroon/Pink) */
+    --emina-pink-soft: #ffffff;  /* Soft Pink */
+    --emina-cream-pink: #FDF0F3; /* Cream Pink */
+    --emina-pink-rose: #ef75ae;  /* Vibrant Rose Pink */
+    --emina-baby-blue: #A3D8F4;  /* Baby Blue */
+    --emina-blue-mute: #527188;  /* Muted Blue */
+    --emina-rose-pastel: #faf1f4; /* Rose Pastel */
+    --background-color: #FFFFFF; /* White Background (Requested Change) */
+    --text-color: #333;
+    --card-bg: #feeeee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: #2d2d2d;
+    --shadow-color: rgba(255, 255, 255, 0.15); 
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 800; /* Judul Bold, besar, playful */
+    color: var(--emina-pink-primary);
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+     color: var(--emina-baby-blue);
+}
+p, label, input, textarea {
+    font-weight: 400; /* Isi Regular, bersih */
+}
+
+/* Utility */
+.pink-bg { background-color: var(--emina-pink-primary) !important; }
+.blue-text { color: var(--emina-baby-blue) !important; }
+.blue-mute-text { color: var(--emina-blue-mute) !important; }
+.pink-rose-text { color: var(--emina-pink-rose) !important; }
+.text-primary-emina { color: var(--emina-pink-primary) !important; }
+.dark-mode .text-primary-emina { color: var(--emina-blue-mute) !important; }
+
+/* navbar Styling */
+.navbar-logo {
+    height: 30px; /* Atur tinggi logo */
+    margin-right: 10px;
+}
+
+.navbar .nav-link {
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+/* Card and Button Styling */
+.custom-card {
+    background-color: var(--card-bg);
+    border-radius: 2.5rem;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.btn-emina {
+    background-color: var(--emina-pink-primary);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.dark-mode .btn-emina {
+    background-color: var(--emina-baby-blue);
+    color: #1a1a1a;
+}
+
+.btn-emina:hover {
+    background-color: #6a0330; /* Darker primary for hover */
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-outline-emina {
+    border: 2px solid var(--emina-pink-primary);
+    color: var(--emina-pink-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-emina:hover {
+    background-color: var(--emina-pink-primary);
+    color: white;
+}
+
+/* Hero Section Animation */
+.hero-section {
+    /* Menggunakan soft pink dan baby blue untuk gradient playful */
+    background: linear-gradient(135deg, var(--emina-pink-soft) 0%, var(--emina-baby-blue) 100%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    animation: fadeIn 1.5s ease-out;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+.dark-mode .hero-section {
+    /* Dark mode gradient remains muted */
+    background: linear-gradient(135deg, #1c1c1c 0%, #3a3a3a 100%);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Product Gallery Slider */
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+.product-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    height: auto;
+}
+
+/* Testimonial Styles */
+.testimonial-card {
+    border-left: 5px solid var(--emina-pink-primary);
+}
+.review-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px; /* Untuk scrollbar */
+}
+
+/* Ingredient Pills Styling */
+.ingredient-pill {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+
+}
+
+.dark-mode .ingredient-pill {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+}
+
+.ingredient-pill.bg-moist {
+    background-color: var(--emina-pink-soft);
+}
+.ingredient-pill.bg-calm {
+    background-color: #d8e8ed;
+}
+
+.dark-mode .ingredient-pill.bg-moist {
+    background-color: #4a4849; /* Darker primary variant */
+    color: #f0f0f0;
+}
+.dark-mode .ingredient-pill.bg-calm {
+    background-color: #2e4d5c; /* Darker blue for contrast */
+    color: #f0f0f0;
+}
+
+.ingredient-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.ingredient-pill.bg-moist .ingredient-icon {
+    color: var(--emina-pink-primary);
+}
+.ingredient-pill.bg-calm .ingredient-icon {
+     color: var(--emina-pink-primary);
+}
+.dark-mode .ingredient-pill.bg-calm .ingredient-icon {
+     color: var(--emina-baby-blue);
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .hero-section {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+/* Footer Styling */
+.app-footer a.footer-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 2.2;
+}
+
+.app-footer a.footer-link:hover {
+    color: var(--emina-pink-primary);
+}
+
+.dark-mode .app-footer a.footer-link {
+    color: #cccccc; /* Lighter color in dark mode */
+}
+
+.dark-mode .app-footer a.footer-link:hover {
+    color: var(--emina-baby-blue);
+}
+
+/* Social Icons */
+.app-footer a.social-icon {
+    color: var(--emina-pink-primary);
+    transition: color 0.2s;
+}
+
+.app-footer a.social-icon:hover {
+    color: var(--emina-pink-primary);
+}
+
+.dark-mode .app-footer a.social-icon {
+    color: var(--emina-baby-blue);
+}
+
+.footer-form-input {
+    height: 50px; /* Menetapkan tinggi spesifik agar sejajar */
+}
+
+.app-footer .btn-emina {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 2.25rem;
+}
